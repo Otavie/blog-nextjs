@@ -1,0 +1,6 @@
+.links {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  gap: 1rem;
+}
