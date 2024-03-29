@@ -1,5 +1,6 @@
-import Link from 'next/link'
+import SingleLink from './singleLink/singleLink'
 import styles from './links.module.css'
+
 const Links = () => {
     const links = [
         {
@@ -18,11 +19,14 @@ const Links = () => {
             title: "Blog",
             path: '/blog'
         }
-    ]
+    ];
+
+    const session = true
+    const isAdmin = true
 
     return (
     <div className={styles.links}>{links.map((link) =>(
-        <Link href={link.path} key={link.title}>{link.title}</Link>
+        <SingleLink item={link} key={link.title} />
     ))}</div>
   )
 }
